@@ -1,1 +1,2 @@
-
+Objective:
+Create a program that finds files with a specified set of permissions. The usage is to look as follows:Usage: ./pfind -d <directory> -p <permissions string> [-h] . This program will recursively search for files whose permissions match the permissions string starting in the specified directory. Permissions strings are to be formatted similarly to how the command ls formats them. There is, however, an important distinction. The ls permissions string has 10 characters, where ours will only have the rightmost 9. In UNIX systems, the leftmost character specifies the type of file (d for directory, l for symlink, etc). Our program will not consider this, and will only worry about the rightmost 9. 
