@@ -1,0 +1,16 @@
+./mtsieve -s100 -e200000000 -t1 : 0m5.982s
+./mtsieve -s100 -e200000000 -t2 : 0m3.363s
+./mtsieve -s100 -e200000000 -t3 : 0m3.298s
+./mtsieve -s100 -e200000000 -t4 : 0m3.308s
+
+What CPU do you have?
+Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz
+
+Does the time scale linearly with the number of threads?
+No
+
+If not, does it continue to improve, plateu, or start to decline?
+I would say that after 3 threads (-t3) it starts to plateu. By running ./mtsieve with different number of threads each time,
+it seems like the results of t3 and t4 are always similar, there isn't a big enough increase in time between t3 and t4 to say that
+its declining or improving, however, there is a consistent decrease in time between -t2 and -t3/-t4 so we know that it's still 
+decreasing between those threads. The time then seems to stabilize around 3 to 4 threads.
